@@ -390,3 +390,103 @@ footer {
 .project-btn:hover {
     background: #1d4ed8;
 }
+
+/* Mobile Responsive Design */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    nav, 
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-style: 24px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .projects,
+    .projects-container,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    button,
+    .btn {
+        max-width: 100%;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Professional button hover */
+button,
+.btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Project card hover */ 
+.project-card,
+.project,
+.card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image hover */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Accessibility: reduce animation when requested */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important; 
+        transition-duration: 0,.01ms !important;
+    }
+}
